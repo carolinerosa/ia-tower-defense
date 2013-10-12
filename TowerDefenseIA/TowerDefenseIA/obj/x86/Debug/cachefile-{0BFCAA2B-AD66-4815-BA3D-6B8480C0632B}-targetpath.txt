@@ -1,0 +1,3 @@
+Content\map1.xnb
+Content\Textures\nonPath.xnb
+Content\Textures\path.xnb

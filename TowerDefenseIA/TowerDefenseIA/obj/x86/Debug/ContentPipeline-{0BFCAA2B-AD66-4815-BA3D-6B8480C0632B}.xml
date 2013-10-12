@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>map1.jpg</Source>
+      <Name>map1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\map1.xnb</Output>
+      <Time>2013-10-11T23:24:21.8305677-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\nonPath.jpg</Source>
+      <Name>Textures\nonPath</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb</Output>
+      <Time>2013-10-11T22:27:44.5182525-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\path.jpg</Source>
+      <Name>Textures\path</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb</Output>
+      <Time>2013-10-11T22:27:49.0675127-03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{0BFCAA2B-AD66-4815-BA3D-6B8480C0632B}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-07-08T18:08:43.73704-03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
