@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
       <Source>map1.jpg</Source>
@@ -8,16 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\map1.xnb</Output>
-      <Time>2013-10-11T23:24:21.8305677-03:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\nonPath.jpg</Source>
-      <Name>Textures\nonPath</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb</Output>
-      <Time>2013-10-11T22:27:44.5182525-03:00</Time>
+      <Time>2013-10-11T23:50:07.6869856-03:00</Time>
     </Item>
     <Item>
       <Source>Textures\path.jpg</Source>
@@ -27,6 +18,140 @@
       <Options>None</Options>
       <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb</Output>
       <Time>2013-10-11T22:27:49.0675127-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\nonPath.png</Source>
+      <Name>Textures\nonPath</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb</Output>
+      <Time>2013-10-12T23:11:36.137601-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\chooseTowers.jpg</Source>
+      <Name>Textures\chooseTowers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\chooseTowers.xnb</Output>
+      <Time>2013-10-15T10:26:25.9906413-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\ArcherTexture.jpg</Source>
+      <Name>Textures\TowerPhotos\ArcherTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ArcherTexture.xnb</Output>
+      <Time>2013-10-15T18:59:37.3868084-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\ChosenOneTexture.jpg</Source>
+      <Name>Textures\TowerPhotos\ChosenOneTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ChosenOneTexture.xnb</Output>
+      <Time>2013-10-15T19:04:35.6008653-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\JesterTexture.png</Source>
+      <Name>Textures\TowerPhotos\JesterTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\JesterTexture.xnb</Output>
+      <Time>2013-10-15T19:00:50.2809777-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\KnightTexture.jpg</Source>
+      <Name>Textures\TowerPhotos\KnightTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\KnightTexture.xnb</Output>
+      <Time>2013-10-15T19:03:11.7770708-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\MageTexture.jpg</Source>
+      <Name>Textures\TowerPhotos\MageTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\MageTexture.xnb</Output>
+      <Time>2013-10-15T19:00:05.6404244-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\MageModel.FBX</Source>
+      <Name>Models\MageModel</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\MageModel.xnb</Output>
+      <Time>2013-10-15T18:54:45.0920901-03:00</Time>
+      <Dependency>
+        <Key>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\MageModel_0.xml</Key>
+        <Value>2013-10-15T19:07:15.1429906-03:00</Value>
+      </Dependency>
+      <Request>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torre_0.xnb</Request>
+      <Request>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\telhado_0.xnb</Request>
+      <Request>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torrezinha_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\MageModel.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\MageModel_0.xml</Output>
+      <Time>2013-10-15T18:54:45.0920901-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\torre.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torre_0.xnb</Output>
+      <Time>2008-05-17T03:34:56.9216342-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\telhado.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\telhado_0.xnb</Output>
+      <Time>2008-05-17T03:34:57.7750952-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\torrezinha.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torrezinha_0.xnb</Output>
+      <Time>2008-05-17T03:34:57.3971897-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -50,8 +50,8 @@ namespace TowerDefenseIA
             GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
 
             effect.World = world;
-            effect.View = CameraFPS.View;
-            effect.Projection = CameraFPS.Projection;
+            effect.View = Camera.View;
+            effect.Projection = Camera.Projection;
             effect.TextureEnabled = true;
             effect.Texture = texture;
 
