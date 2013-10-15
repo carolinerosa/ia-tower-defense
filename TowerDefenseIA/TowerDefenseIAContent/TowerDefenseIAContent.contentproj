@@ -37,13 +37,57 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Textures\nonPath.jpg">
+    <Compile Include="Textures\path.jpg">
+      <Name>path</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\nonPath.png">
       <Name>nonPath</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Textures\path.jpg">
-      <Name>path</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\chooseTowers.jpg">
+      <Name>chooseTowers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Models\MageModel.FBX">
+      <Name>MageModel</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\TowerPhotos\ArcherTexture.jpg">
+      <Name>ArcherTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\TowerPhotos\ChosenOneTexture.jpg">
+      <Name>ChosenOneTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\TowerPhotos\JesterTexture.png">
+      <Name>JesterTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\TowerPhotos\KnightTexture.jpg">
+      <Name>KnightTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\TowerPhotos\MageTexture.jpg">
+      <Name>MageTexture</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

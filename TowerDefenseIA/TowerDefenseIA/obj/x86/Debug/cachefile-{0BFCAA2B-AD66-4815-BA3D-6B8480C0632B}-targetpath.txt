@@ -1,3 +1,13 @@
 Content\map1.xnb
-Content\Textures\nonPath.xnb
 Content\Textures\path.xnb
+Content\Textures\nonPath.xnb
+Content\Textures\chooseTowers.xnb
+Content\Textures\TowerPhotos\ArcherTexture.xnb
+Content\Textures\TowerPhotos\ChosenOneTexture.xnb
+Content\Textures\TowerPhotos\JesterTexture.xnb
+Content\Textures\TowerPhotos\KnightTexture.xnb
+Content\Textures\TowerPhotos\MageTexture.xnb
+Content\Models\MageModel.xnb
+Content\Models\torre_0.xnb
+Content\Models\telhado_0.xnb
+Content\Models\torrezinha_0.xnb

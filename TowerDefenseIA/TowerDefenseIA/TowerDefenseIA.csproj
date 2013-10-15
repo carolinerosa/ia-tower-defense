@@ -73,12 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Camera.cs" />
-    <Compile Include="Classes\CameraFPS.cs" />
+    <Compile Include="Classes\ChooseTowersInterface.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Grid.cs" />
     <Compile Include="Classes\Input.cs" />
     <Compile Include="Classes\Main.cs" />
     <Compile Include="Classes\Plane.cs" />
+    <Compile Include="Classes\Tower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />

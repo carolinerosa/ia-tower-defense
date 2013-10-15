@@ -3,45 +3,68 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace TowerDefenseIA
 {
     public class Camera : GameComponent
     {
-        Game game;
         Vector3 position, rotation, targetPosition;
-        Vector3 upVector;
+        Vector3 currentUpVector;
+        Matrix rotationMatrix;
 
         static Matrix viewMatrix;
         static Matrix projectionMatrix;
         float fieldOfView = 45;
         float near = 1, far = 1000;
 
-        public Camera(Game game, Vector3 position, Vector3 rotation, Vector3 targetPosition, Vector3 upVector) : base(game)
+        public Camera(Game Game, Vector3 position, Vector3 rotation) : base(Game)
         {
-            this.game = game;
             this.position = position;
             this.rotation = rotation;
-            this.targetPosition = targetPosition;
-            this.upVector = upVector;
 
-            game.Components.Add(this);
+            Game.Components.Add(this);
         }
 
         public override void Initialize()
         {
             base.Initialize();
 
-            viewMatrix = Matrix.CreateLookAt(position, targetPosition, upVector);
-            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(fieldOfView), game.Window.ClientBounds.Width / (float)game.Window.ClientBounds.Height, near, far);
+            rotationMatrix = Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z);
+            currentUpVector = Vector3.Transform(Vector3.Up, rotationMatrix);
+
+            viewMatrix = Matrix.CreateLookAt(position, targetPosition, currentUpVector);
+            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(fieldOfView), Game.Window.ClientBounds.Width / (float)Game.Window.ClientBounds.Height, near, far);
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update(GameTime GameTime)
         {
-            viewMatrix = Matrix.CreateLookAt(position, targetPosition, upVector);
-            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(fieldOfView), game.Window.ClientBounds.Width / (float)game.Window.ClientBounds.Height, near, far);
+            if (Input.GetKey(Keys.Right))
+            {
+                position.X -= 1;
+            }
 
-            base.Update(gameTime);
+            if (Input.GetKey(Keys.Left))
+            {
+                position.X += 1;
+            }
+
+            if (Input.GetKey(Keys.Down))
+            {
+                position.Z -= 1;
+            }
+
+            if (Input.GetKey(Keys.Up))
+            {
+                position.Z += 1;
+            }
+            
+            Vector3 cameraRotatedTarget = Vector3.Transform(Vector3.Zero, rotationMatrix);
+            targetPosition = new Vector3(position.X + cameraRotatedTarget.X, 0, position.Z + cameraRotatedTarget.Z);
+
+            viewMatrix = Matrix.CreateLookAt(position, targetPosition, currentUpVector);
+
+            base.Update(GameTime);
         }
 
         public static Matrix Projection
