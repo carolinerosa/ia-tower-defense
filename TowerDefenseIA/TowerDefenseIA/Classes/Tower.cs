@@ -7,53 +7,56 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace TowerDefenseIA
 {
-    public enum TowerType { Knight, Archer, Mage, Jester, TheChosenOne };
-
     public class Tower : GameObject
     {
         Model model;
-        TowerType type;
+        private bool isFixed = false;
 
-        public Tower(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture, TowerType type) : base(game, scale, rotation, position, texture)
+        public Tower(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position)
         {
-            this.type = type;
+            this.model = model;
         }
 
         public override void Initialize()
         {
             base.Initialize();
-
-        }
-
-        protected override void LoadContent()
-        {
-            base.LoadContent();
-
-            switch (type)
-	        {
-                case TowerType.Archer:
-                    model = Game.Content.Load<Model>(@"Models\ArcherModel");
-                    break;
-                case TowerType.Jester:
-                    model = Game.Content.Load<Model>(@"Models\JesterModel");
-                    break;
-                case TowerType.Knight:
-                    model = Game.Content.Load<Model>(@"Models\KnightModel");
-                    break;
-                case TowerType.Mage:
-                    model = Game.Content.Load<Model>(@"Models\MageModel");
-                    break;
-                case TowerType.TheChosenOne:
-                    model = Game.Content.Load<Model>(@"Models\ChosenOneModel");
-                    break;
-	        }
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (isFixed == false)
+            {
+                Vector3 mousePosition = new Vector3(Input.MousePosition.X, Input.MousePosition.Y, 0);
+                Vector3 pointInWorldSpace = GraphicsDevice.Viewport.Unproject(mousePosition, Camera.Projection, Camera.View, this.world);
+                position = new Vector3(pointInWorldSpace.X, 0, pointInWorldSpace.Y);
+                Console.WriteLine("position: " + position);
+                Console.WriteLine("point: " + pointInWorldSpace);
+            }
+
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);
 
             base.Update(gameTime);
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            Matrix[] transforms = new Matrix[this.model.Bones.Count];
+            this.model.CopyAbsoluteBoneTransformsTo(transforms);
+
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.EnableDefaultLighting();
+                    effect.World = world;
+                    effect.View = Camera.View;
+                    effect.Projection = Camera.Projection;
+                }
+
+                mesh.Draw();
+            }
+
+            base.Draw(gameTime);
         }
     }
 }

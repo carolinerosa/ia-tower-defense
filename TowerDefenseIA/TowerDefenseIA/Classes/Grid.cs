@@ -46,8 +46,8 @@ namespace TowerDefenseIA
             {
                 for (int y = 0; y < columnNumber; y++)
                 {
-                    float positionX = this.position.X + x * (scale * 2);
-                    float positionZ = this.position.Z + y * (scale * 2);
+                    float positionX = this.position.X + y * (scale * 2);
+                    float positionZ = this.position.Z + x * (scale * 2);
 
                     if (map1[x, y] == "x")
                     {
