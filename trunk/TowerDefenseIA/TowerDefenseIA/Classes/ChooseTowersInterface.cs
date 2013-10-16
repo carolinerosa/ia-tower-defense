@@ -19,9 +19,10 @@ namespace TowerDefenseIA
         SpriteBatch spriteBatch;
         Texture2D texture;
 
-        int numberOfTowers = 5;
+        public int numberOfTowers = 5;
         Rectangle[] towersPhotoRectangle;
         Texture2D[] towerTextures;
+        Model archerModel, jesterModel, knightModel, mageModel, chosenOneModel;
 
         public ChooseTowersInterface(Game game, SpriteBatch spriteBatch, Texture2D texture) : base(game)
         {
@@ -44,19 +45,6 @@ namespace TowerDefenseIA
             InstantiateTowerPhotos();
         }
 
-        private void InstantiateTowerPhotos()
-        {
-            towersPhotoRectangle = new Rectangle[numberOfTowers];
-
-            int rectWidth = windowWidth / 6;
-            int rectHeight = windowHeight / numberOfTowers;
-
-            for (int i = 0; i < numberOfTowers; i++)
-            {
-                towersPhotoRectangle[i] = new Rectangle(windowWidth - rectWidth, windowHeight - (rectHeight * (i + 1)), rectWidth, rectHeight);
-            }
-        }
-
         protected override void LoadContent()
         {
             base.LoadContent();
@@ -66,7 +54,13 @@ namespace TowerDefenseIA
             towerTextures[1] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\JesterTexture");
             towerTextures[2] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\KnightTexture");
             towerTextures[3] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\MageTexture");
-            towerTextures[4] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\ChosenOneTexture");          
+            towerTextures[4] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\ChosenOneTexture");
+
+            //archerModel = Game.Content.Load<Model>(@"Models\ArcherModel");
+            //jesterModel = Game.Content.Load<Model>(@"Models\JesterModel");
+            //knightModel = Game.Content.Load<Model>(@"Models\KnightModel");
+            mageModel = Game.Content.Load<Model>(@"Models\MageModel");
+            //chosenOneModel = Game.Content.Load<Model>(@"Models\ChosenOneModel");
         }
 
         public override void Draw(GameTime gameTime)
@@ -83,6 +77,46 @@ namespace TowerDefenseIA
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        private void InstantiateTowerPhotos()
+        {
+            towersPhotoRectangle = new Rectangle[numberOfTowers];
+
+            int rectWidth = windowWidth / 6;
+            int rectHeight = windowHeight / numberOfTowers;
+
+            for (int i = 0; i < numberOfTowers; i++)
+            {
+                towersPhotoRectangle[i] = new Rectangle(windowWidth - rectWidth, windowHeight - (rectHeight * (i + 1)), rectWidth, rectHeight);
+            }
+        }
+
+        public void InstantiateTower(int i)
+        {
+            switch (i)
+            {
+                case 0:
+                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), archerModel);
+                    break;
+                case 1:
+                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), jesterModel);
+                    break;
+                case 2:
+                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), knightModel);
+                    break;
+                case 3:
+                    new Tower(Game, new Vector3(0.03f, 0.03f, 0.03f), new Vector3(90, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), mageModel);
+                    break;
+                case 4:
+                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), chosenOneModel);
+                    break;
+            }
+        }
+
+        public Rectangle TowerRectangle(int i)
+        {
+            return towersPhotoRectangle[i];
         }
     }
 }
