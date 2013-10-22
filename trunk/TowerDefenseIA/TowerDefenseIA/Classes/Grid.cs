@@ -14,6 +14,7 @@ namespace TowerDefenseIA
         Texture2D path, nonPath, map;
         int scale = 5;
 
+        Plane[,] planes;
         string[,] map1 = {{"x","x","x","o","o","o","o","o","o","o","o","o","o","o"},
                           {"o","o","x","o","o","o","x","x","x","x","x","x","o","o"},
                           {"o","o","x","o","o","o","x","o","o","o","o","x","o","o"},
@@ -24,6 +25,8 @@ namespace TowerDefenseIA
                           {"o","o","o","o","o","o","o","o","o","o","o","x","o","o"},
                           {"o","o","o","o","o","o","o","o","o","o","o","x","o","o"},
                           {"o","o","o","o","o","o","o","o","o","o","o","x","x","x"}};
+
+        private  List<Plane> planePathList;
 
         public Grid(Game game, Vector3 position, int rowNumber, int columnNumber, Texture2D path, Texture2D nonPath, Texture2D map) : base(game)
         {
@@ -42,6 +45,8 @@ namespace TowerDefenseIA
         {
             base.Initialize();
 
+            planes = new Plane[rowNumber, columnNumber];
+
             for (int x = 0; x < rowNumber; x++)
             {
                 for (int y = 0; y < columnNumber; y++)
@@ -51,11 +56,13 @@ namespace TowerDefenseIA
 
                     if (map1[x, y] == "x")
                     {
-                        Plane plane = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
+                        planes[x,y] = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
+                        planes[x, y].isPath = true;
                     }
                     else
                     {
-                        Plane plane = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
+                        planes[x,y] = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
+                        planes[x, y].isPath = false;
                     }
                 }
             }
@@ -81,7 +88,61 @@ namespace TowerDefenseIA
             }*/
         }
 
-        private Color[,] GetMapPixels()
+        public void Organizeplanes()
+        {
+            planePathList = new List<Plane>();
+
+            for (int x = 0; x < rowNumber; x++)
+            {
+                for (int y = 0; y < columnNumber; y++)
+                {
+                    planePathList.Add(planes[x, y]);
+
+                    //right
+                    if (planes[x + 1, y] != null)
+                    {
+                        if (planes[x + 1, y].isPath && !planePathList.Contains(planes[x + 1, y]))
+                        {
+                            planes[x, y].child = planes[x + 1, y];
+                            planePathList.Add(planes[x + 1, y]);
+                        }
+                    }
+
+                    //left
+                    if (planes[x - 1, y] != null)
+                    {
+                        if (planes[x - 1, y].isPath && !planePathList.Contains(planes[x - 1, y]))
+                        {
+                            planes[x, y].child = planes[x - 1, y];
+                            planePathList.Add(planes[x - 1, y]);
+                        }
+                    }
+
+                    //up
+                    if (planes[x, y + 1] != null)
+                    {
+                        if (planes[x, y + 1].isPath && !planePathList.Contains(planes[x, y + 1]))
+                        {
+                            planes[x, y].child = planes[x, y + 1];
+                            planePathList.Add(planes[x, y + 1]);
+                        }
+                    }
+
+                    //down
+                    if (planes[x, y - 1] != null)
+                    {
+                        if (planes[x, y - 1].isPath && !planePathList.Contains(planes[x, y - 1]))
+                        {
+                            planes[x, y].child = planes[x, y - 1];
+                            planePathList.Add(planes[x, y - 1]);
+                        }
+                    }
+                }
+            }
+        }
+
+        //Retorna uma matrix que contém as cores dos pixel da textura
+        /*private Color[,] GetMapPixels()
         {
             Color[] map1D = new Color[map.Width * map.Height];
             Color[,] map2D = new Color[map.Width, map.Height];
@@ -97,6 +158,6 @@ namespace TowerDefenseIA
             }
 
             return map2D;
-        }
+        }*/
     }
 }

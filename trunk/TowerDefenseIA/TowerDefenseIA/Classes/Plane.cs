@@ -12,6 +12,8 @@ namespace TowerDefenseIA
         VertexPositionTexture[] verts;
         VertexBuffer vertexBuffer;
         BasicEffect effect;
+        public Plane child;
+        private bool _isPath;
 
         public Plane(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture) : base(game, scale, rotation, position, texture)
         { }
@@ -62,6 +64,12 @@ namespace TowerDefenseIA
             }
 
             base.Draw(gameTime);
+        }
+
+        public bool isPath
+        {
+            get { return this._isPath; }
+            set { _isPath = value; }
         }
     }
 }
