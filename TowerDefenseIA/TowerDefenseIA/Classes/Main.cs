@@ -10,6 +10,7 @@ namespace TowerDefenseIA
 {
     public class Main : DrawableGameComponent
     {
+        //CameraFPS cam;
         Camera cam;
         Grid grid;
         ChooseTowersInterface chooseTowersInterface;
@@ -26,7 +27,7 @@ namespace TowerDefenseIA
         public override void Initialize()
         {
             base.Initialize();
-
+            //cam = new CameraFPS(Game);
             cam = new Camera(Game, new Vector3(0, 50, 0), new Vector3(90, 0, 0));
             grid = new Grid(Game, new Vector3(0, 0, 0), 10, 14, pathTexture, nonPathTexture, map);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);

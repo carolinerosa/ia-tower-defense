@@ -9,12 +9,12 @@ namespace TowerDefenseIA
 {
     public class Tower : GameObject
     {
-        Model model;
         private bool isFixed = false;
+        protected int price;
 
-        public Tower(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position)
+        public Tower(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position, model)
         {
-            this.model = model;
+
         }
 
         public override void Initialize()
@@ -26,11 +26,11 @@ namespace TowerDefenseIA
         {
             if (isFixed == false)
             {
-                Vector3 mousePosition = new Vector3(Input.MousePosition.X, Input.MousePosition.Y, 0);
-                Vector3 pointInWorldSpace = GraphicsDevice.Viewport.Unproject(mousePosition, Camera.Projection, Camera.View, this.world);
+                /*Vector3 mousePosition = new Vector3(Input.MousePosition.X, Input.MousePosition.Y, 0);
+                Vector3 pointInWorldSpace = GraphicsDevice.Viewport.Unproject(mousePosition, Camera.Projection, Camera.View, Matrix.Identity);
                 position = new Vector3(pointInWorldSpace.X, 0, pointInWorldSpace.Y);
                 Console.WriteLine("position: " + position);
-                Console.WriteLine("point: " + pointInWorldSpace);
+                Console.WriteLine("point: " + pointInWorldSpace);*/
             }
 
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);

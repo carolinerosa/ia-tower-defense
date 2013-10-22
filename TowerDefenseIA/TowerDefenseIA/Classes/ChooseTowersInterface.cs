@@ -106,7 +106,7 @@ namespace TowerDefenseIA
                     new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), knightModel);
                     break;
                 case 3:
-                    new Tower(Game, new Vector3(0.03f, 0.03f, 0.03f), new Vector3(90, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), mageModel);
+                    new Tower(Game, new Vector3(0.1f, 0.01f, 0.1f), new Vector3(90, 0, 0), new Vector3(0, 0, 0), mageModel);
                     break;
                 case 4:
                     new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), chosenOneModel);

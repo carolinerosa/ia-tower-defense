@@ -73,7 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Camera.cs" />
+    <Compile Include="Classes\CameraFPS.cs" />
     <Compile Include="Classes\ChooseTowersInterface.cs" />
+    <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Grid.cs" />
     <Compile Include="Classes\Input.cs" />
