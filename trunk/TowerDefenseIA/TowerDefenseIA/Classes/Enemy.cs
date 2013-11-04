@@ -9,12 +9,14 @@ namespace TowerDefenseIA
 {
     public class Enemy : GameObject
     {
-        Plane target;
-        Plane currentPlane;
-
         public Enemy(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position, model)
         {
 
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
