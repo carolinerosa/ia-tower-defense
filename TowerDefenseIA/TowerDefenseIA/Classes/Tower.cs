@@ -26,11 +26,11 @@ namespace TowerDefenseIA
         {
             if (isFixed == false)
             {
-                /*Vector3 mousePosition = new Vector3(Input.MousePosition.X, Input.MousePosition.Y, 0);
-                Vector3 pointInWorldSpace = GraphicsDevice.Viewport.Unproject(mousePosition, Camera.Projection, Camera.View, Matrix.Identity);
+                Vector3 mousePosition = new Vector3(Input.MousePosition.X, Input.MousePosition.Y, 0);
+                Vector3 pointInWorldSpace = GraphicsDevice.Viewport.Unproject(mousePosition, Matrix.Invert(Camera.Projection), Camera.View, this.world);
                 position = new Vector3(pointInWorldSpace.X, 0, pointInWorldSpace.Y);
                 Console.WriteLine("position: " + position);
-                Console.WriteLine("point: " + pointInWorldSpace);*/
+                Console.WriteLine("point: " + pointInWorldSpace);
             }
 
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);

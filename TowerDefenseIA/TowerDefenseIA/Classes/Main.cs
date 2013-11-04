@@ -15,7 +15,7 @@ namespace TowerDefenseIA
         Grid grid;
         ChooseTowersInterface chooseTowersInterface;
 
-        Texture2D pathTexture, nonPathTexture, map;
+        Texture2D pathTexture, nonPathTexture;
         Texture2D chooseTowersTexture;
         SpriteBatch spriteBatch;
 
@@ -28,8 +28,8 @@ namespace TowerDefenseIA
         {
             base.Initialize();
             //cam = new CameraFPS(Game);
-            cam = new Camera(Game, new Vector3(0, 50, 0), new Vector3(90, 0, 0));
-            grid = new Grid(Game, new Vector3(0, 0, 0), 10, 14, pathTexture, nonPathTexture, map);
+            cam = new Camera(Game, Vector3.Up * 50, Vector3.Right * 90);
+            grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
             chooseTowersInterface.DrawOrder = 143;
         }
@@ -41,8 +41,6 @@ namespace TowerDefenseIA
             pathTexture = Game.Content.Load<Texture2D>(@"Textures\path");
             nonPathTexture = Game.Content.Load<Texture2D>(@"Textures\nonPath");
             chooseTowersTexture = Game.Content.Load<Texture2D>(@"Textures\chooseTowers");
-
-            map = Game.Content.Load<Texture2D>("map1");
         }
 
         public override void Update(GameTime gameTime)

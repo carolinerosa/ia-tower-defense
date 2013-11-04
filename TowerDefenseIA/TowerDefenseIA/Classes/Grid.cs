@@ -9,26 +9,15 @@ namespace TowerDefenseIA
 {
     public class Grid : GameComponent
     {
-        Vector3 position;
-        int rowNumber, columnNumber;
-        Texture2D path, nonPath, map;
-        int scale = 5;
+        private Vector3 position;
+        private int rowNumber, columnNumber;
+        private Texture2D path, nonPath;
+        private int scale = 5;
 
-        Plane[,] planes;
-        string[,] map1 = {{"x","x","x","o","o","o","o","o","o","o","o","o","o","o"},
-                          {"o","o","x","o","o","o","x","x","x","x","x","x","o","o"},
-                          {"o","o","x","o","o","o","x","o","o","o","o","x","o","o"},
-                          {"o","o","x","o","o","o","x","o","o","o","o","x","o","o"},
-                          {"o","o","x","o","o","o","x","o","o","o","o","x","o","o"},
-                          {"o","o","x","x","x","x","x","o","o","o","o","x","o","o"},
-                          {"o","o","o","o","o","o","o","o","o","o","o","x","o","o"},
-                          {"o","o","o","o","o","o","o","o","o","o","o","x","o","o"},
-                          {"o","o","o","o","o","o","o","o","o","o","o","x","o","o"},
-                          {"o","o","o","o","o","o","o","o","o","o","o","x","x","x"}};
+        private Plane[,] planes;
+        private Vector3 planeScale;
 
-        private  List<Plane> planePathList;
-
-        public Grid(Game game, Vector3 position, int rowNumber, int columnNumber, Texture2D path, Texture2D nonPath, Texture2D map) : base(game)
+        public Grid(Game game, Vector3 position, int rowNumber, int columnNumber, Texture2D path, Texture2D nonPath) : base(game)
         {
             this.position = position;
             this.rowNumber = rowNumber;
@@ -36,7 +25,6 @@ namespace TowerDefenseIA
 
             this.path = path;
             this.nonPath = nonPath;
-            this.map = map;
 
             Game.Components.Add(this);
         }
@@ -46,6 +34,7 @@ namespace TowerDefenseIA
             base.Initialize();
 
             planes = new Plane[rowNumber, columnNumber];
+            planeScale = new Vector3(scale, 0, scale);
 
             for (int x = 0; x < rowNumber; x++)
             {
@@ -54,110 +43,16 @@ namespace TowerDefenseIA
                     float positionX = this.position.X + y * (scale * 2);
                     float positionZ = this.position.Z + x * (scale * 2);
 
-                    if (map1[x, y] == "x")
+                    if (y == 0)
                     {
-                        planes[x,y] = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
-                        planes[x, y].isPath = true;
+                        planes[x, y] = new Plane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
                     }
                     else
                     {
-                        planes[x,y] = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
-                        planes[x, y].isPath = false;
-                    }
-                }
-            }
-
-            /*Color[,] mapPixelsColor = GetMapPixels();
-
-            for (int x = 0; x < columnNumber; x++)
-            {
-                for (int y = 0; y < rowNumber; y++)
-                {
-                    float positionX = this.position.X + x * (scale * 2);
-                    float positionZ = this.position.Z + y * (scale * 2);
-
-                    if (mapPixelsColor[x, y] == Color.Black)
-                    {
-                        Plane plane = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
-                    }
-                    else
-                    {
-                        Plane plane = new Plane(Game, new Vector3(scale, 0, scale), Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
-                    }
-                }
-            }*/
-        }
-
-        public void Organizeplanes()
-        {
-            planePathList = new List<Plane>();
-
-            for (int x = 0; x < rowNumber; x++)
-            {
-                for (int y = 0; y < columnNumber; y++)
-                {
-                    planePathList.Add(planes[x, y]);
-
-                    //right
-                    if (planes[x + 1, y] != null)
-                    {
-                        if (planes[x + 1, y].isPath && !planePathList.Contains(planes[x + 1, y]))
-                        {
-                            planes[x, y].child = planes[x + 1, y];
-                            planePathList.Add(planes[x + 1, y]);
-                        }
-                    }
-
-                    //left
-                    if (planes[x - 1, y] != null)
-                    {
-                        if (planes[x - 1, y].isPath && !planePathList.Contains(planes[x - 1, y]))
-                        {
-                            planes[x, y].child = planes[x - 1, y];
-                            planePathList.Add(planes[x - 1, y]);
-                        }
-                    }
-
-                    //up
-                    if (planes[x, y + 1] != null)
-                    {
-                        if (planes[x, y + 1].isPath && !planePathList.Contains(planes[x, y + 1]))
-                        {
-                            planes[x, y].child = planes[x, y + 1];
-                            planePathList.Add(planes[x, y + 1]);
-                        }
-                    }
-
-                    //down
-                    if (planes[x, y - 1] != null)
-                    {
-                        if (planes[x, y - 1].isPath && !planePathList.Contains(planes[x, y - 1]))
-                        {
-                            planes[x, y].child = planes[x, y - 1];
-                            planePathList.Add(planes[x, y - 1]);
-                        }
+                        planes[x, y] = new Plane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
                     }
                 }
             }
         }
-
-        //Retorna uma matrix que contém as cores dos pixel da textura
-        /*private Color[,] GetMapPixels()
-        {
-            Color[] map1D = new Color[map.Width * map.Height];
-            Color[,] map2D = new Color[map.Width, map.Height];
-
-            map.GetData<Color>(map1D);
-
-            for (int x = 0; x < map.Width; x++)
-            {
-                for (int y = 0; y < map.Height; y++)
-                {
-                    map2D[x, y] = map1D[x + (y * map.Width)];
-                }
-            }
-
-            return map2D;
-        }*/
     }
 }
