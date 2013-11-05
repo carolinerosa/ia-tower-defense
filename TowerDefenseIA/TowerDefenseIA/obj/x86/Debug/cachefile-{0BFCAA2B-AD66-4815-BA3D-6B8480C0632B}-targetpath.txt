@@ -1,4 +1,3 @@
-Content\map1.xnb
 Content\Textures\path.xnb
 Content\Textures\nonPath.xnb
 Content\Textures\chooseTowers.xnb

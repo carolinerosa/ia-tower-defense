@@ -7,13 +7,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace TowerDefenseIA
 {
-    public class Plane : GameObject
+    public class GamePlane : GameObject
     {
         VertexPositionTexture[] verts;
         VertexBuffer vertexBuffer;
         BasicEffect effect;
 
-        public Plane(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture) : base(game, scale, rotation, position, texture)
+        public GamePlane(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture) : base(game, scale, rotation, position, texture)
         { }
 
         public override void Initialize()

@@ -14,7 +14,7 @@ namespace TowerDefenseIA
         private Texture2D path, nonPath;
         private int scale = 5;
 
-        private Plane[,] planes;
+        private GamePlane[,] planes;
         private Vector3 planeScale;
 
         public Grid(Game game, Vector3 position, int rowNumber, int columnNumber, Texture2D path, Texture2D nonPath) : base(game)
@@ -33,7 +33,7 @@ namespace TowerDefenseIA
         {
             base.Initialize();
 
-            planes = new Plane[rowNumber, columnNumber];
+            planes = new GamePlane[rowNumber, columnNumber];
             planeScale = new Vector3(scale, 0, scale);
 
             for (int x = 0; x < rowNumber; x++)
@@ -45,11 +45,11 @@ namespace TowerDefenseIA
 
                     if (y == 0)
                     {
-                        planes[x, y] = new Plane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
                     }
                     else
                     {
-                        planes[x, y] = new Plane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
                     }
                 }
             }
