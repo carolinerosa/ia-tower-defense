@@ -48,8 +48,16 @@ namespace TowerDefenseIA
             if (Input.LeftMouseButtonDown())
             {
                 CheckInterfaceClick(Input.MousePosition);
+
+                Matrix world = Matrix.CreateTranslation(0, 0, 0);
+
+                //Vector3 source = new Vector3((float) Input.MousePosition.X, 1f, (float) Input.MousePosition.Y);
+                Vector3 mousePoint = GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1f), Camera.Projection, Camera.View, world);
+
+                System.Console.Out.WriteLine("x: " + mousePoint.X + ", Y: " + mousePoint.Y + ", Z: " + mousePoint.Z);
             }
 
+            
             base.Update(gameTime);
         }
 

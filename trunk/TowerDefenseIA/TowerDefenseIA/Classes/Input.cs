@@ -77,7 +77,7 @@ namespace TowerDefenseIA
         public static void LateUpdate()
         {
             _OldKeyboard = _Keyboard;
-
+            
             if (_Mouse.LeftButton == ButtonState.Released)
             {
                 pressed = false;

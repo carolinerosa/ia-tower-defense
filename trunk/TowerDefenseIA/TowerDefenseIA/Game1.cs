@@ -24,7 +24,7 @@ namespace TowerDefenseIA
 
         protected override void Initialize()
         {
-            Window.Title = "Towe Defense - Nome Provisório Que Não Existe";
+            Window.Title = "Towe Defense - Mega Saldão de Torres";
             IsMouseVisible = true;
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -38,7 +38,7 @@ namespace TowerDefenseIA
         protected override void Update(GameTime gameTime)
         {
             Input.Update();
-            
+
             if (Input.GetKeyDown(Keys.Escape))
                 this.Exit();
 
