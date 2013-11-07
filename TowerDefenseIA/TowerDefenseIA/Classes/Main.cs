@@ -14,6 +14,7 @@ namespace TowerDefenseIA
         Camera cam;
         Grid grid;
         ChooseTowersInterface chooseTowersInterface;
+        Tower currentTower;
 
         Texture2D pathTexture, nonPathTexture;
         Texture2D chooseTowersTexture;
@@ -31,7 +32,7 @@ namespace TowerDefenseIA
             cam = new Camera(Game, Vector3.Up * 50, Vector3.Right * 90);
             grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
-            chooseTowersInterface.DrawOrder = 143;
+            chooseTowersInterface.DrawOrder = 50;
         }
 
         protected override void LoadContent()
@@ -47,17 +48,22 @@ namespace TowerDefenseIA
         {
             if (Input.LeftMouseButtonDown())
             {
+                Console.WriteLine(GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1), Camera.Projection, Camera.View, Matrix.Identity));
+
+                if (currentTower != null)
+                {
+                    GamePlane plane = grid.CheckPlaneClicked(currentTower.GetPosition());
+
+                    if (plane != null && plane.IsPath && plane.IsOpen)
+                    {
+                        currentTower.Fix(plane.GetPosition());
+                        plane.IsOpen = false;
+                    }
+                }
+
                 CheckInterfaceClick(Input.MousePosition);
-
-                Matrix world = Matrix.CreateTranslation(0, 0, 0);
-
-                //Vector3 source = new Vector3((float) Input.MousePosition.X, 1f, (float) Input.MousePosition.Y);
-                Vector3 mousePoint = GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1f), Camera.Projection, Camera.View, world);
-
-                System.Console.Out.WriteLine("x: " + mousePoint.X + ", Y: " + mousePoint.Y + ", Z: " + mousePoint.Z);
             }
-
-            
+ 
             base.Update(gameTime);
         }
 
@@ -71,7 +77,7 @@ namespace TowerDefenseIA
                     mousePosition.Y >= chooseTowersInterface.TowerRectangle(i).Y && 
                     mousePosition.Y <= chooseTowersInterface.TowerRectangle(i).Y + chooseTowersInterface.TowerRectangle(i).Height)
                 {
-                    chooseTowersInterface.InstantiateTower(i);
+                    currentTower = chooseTowersInterface.InstantiateTower(i);
                 }
             }
         }

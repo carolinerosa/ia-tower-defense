@@ -26,12 +26,19 @@ namespace TowerDefenseIA
         {
             if (isFixed == false)
             {
-                
+                Vector3 mousePoint = GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1f), Camera.Projection, Camera.View, Matrix.Identity);
+                position = mousePoint;
             }
 
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);
-
+            
             base.Update(gameTime);
+        }
+
+        public void Fix(Vector3 position)
+        {
+            isFixed = true;
+            this.position = position;
         }
 
         public override void Draw(GameTime gameTime)

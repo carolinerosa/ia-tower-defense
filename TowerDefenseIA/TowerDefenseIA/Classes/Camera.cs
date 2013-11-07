@@ -15,7 +15,7 @@ namespace TowerDefenseIA
 
         static Matrix viewMatrix;
         static Matrix projectionMatrix;
-        float fieldOfView = 30;
+        float fieldOfView = 90;
         float near = 1, far = 50;
 
         public Camera(Game Game, Vector3 position, Vector3 rotation) : base(Game)
@@ -26,12 +26,22 @@ namespace TowerDefenseIA
             Game.Components.Add(this);
         }
 
+        public Camera(Game Game, Vector3 position, Vector3 rotation, int near, int far) : base(Game)
+        {
+            this.position = position;
+            this.rotation = rotation;
+            this.far = far;
+            this.near = near;
+
+            Game.Components.Add(this);
+        }
+
         public override void Initialize()
         {
             base.Initialize();
 
             rotationMatrix = Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z);
-            currentUpVector = Vector3.Transform(Vector3.Up, rotationMatrix);
+            currentUpVector = Vector3.Transform(Vector3.Up, -rotationMatrix);
 
             viewMatrix = Matrix.CreateLookAt(position, targetPosition, currentUpVector);
             projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(fieldOfView), Game.Window.ClientBounds.Width / (float)Game.Window.ClientBounds.Height, near, far);
@@ -41,22 +51,22 @@ namespace TowerDefenseIA
         {
             if (Input.GetKey(Keys.Right))
             {
-                position.X -= 1;
+                position.X += 1;
             }
 
             if (Input.GetKey(Keys.Left))
             {
-                position.X += 1;
+                position.X -= 1;
             }
 
             if (Input.GetKey(Keys.Down))
             {
-                position.Z -= 1;
+                position.Z += 1;
             }
 
             if (Input.GetKey(Keys.Up))
             {
-                position.Z += 1;
+                position.Z -= 1;
             }
             
             Vector3 cameraRotatedTarget = Vector3.Transform(Vector3.Zero, rotationMatrix);

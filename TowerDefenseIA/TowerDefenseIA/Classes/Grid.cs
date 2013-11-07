@@ -12,7 +12,8 @@ namespace TowerDefenseIA
         private Vector3 position;
         private int rowNumber, columnNumber;
         private Texture2D path, nonPath;
-        private int scale = 5;
+        private int xScale = 10;
+        private int yScale = 16;
 
         private GamePlane[,] planes;
         private Vector3 planeScale;
@@ -34,25 +35,44 @@ namespace TowerDefenseIA
             base.Initialize();
 
             planes = new GamePlane[rowNumber, columnNumber];
-            planeScale = new Vector3(scale, 0, scale);
+            planeScale = new Vector3(xScale, 0, yScale);
 
             for (int x = 0; x < rowNumber; x++)
             {
                 for (int y = 0; y < columnNumber; y++)
                 {
-                    float positionX = this.position.X + y * (scale * 2);
-                    float positionZ = this.position.Z + x * (scale * 2);
+                    float positionX = this.position.X + y * xScale;
+                    float positionZ = this.position.Z + x * yScale;
 
                     if (y == 0)
                     {
-                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath, false);
                     }
                     else
                     {
-                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path, true);
                     }
                 }
             }
+        }
+
+        public GamePlane CheckPlaneClicked(Vector3 mousePositionInWorld)
+        {
+            for (int x = 0; x < rowNumber; x++)
+            {
+                for (int y = 0; y < columnNumber; y++)
+                {
+                    if (mousePositionInWorld.X >= planes[x, y].GetPosition().X - (xScale / 2) &&
+                    mousePositionInWorld.X <= planes[x, y].GetPosition().X + (xScale / 2) &&
+                    mousePositionInWorld.Z >= planes[x, y].GetPosition().Z - (yScale / 2) &&
+                    mousePositionInWorld.Z <= planes[x, y].GetPosition().Z + (yScale / 2))
+                    {
+                        return planes[x, y];
+                    }
+                }           
+            }
+
+            return null;
         }
     }
 }
