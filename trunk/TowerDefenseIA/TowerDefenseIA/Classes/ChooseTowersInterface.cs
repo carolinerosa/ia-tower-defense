@@ -18,6 +18,7 @@ namespace TowerDefenseIA
         int windowHeight;
         SpriteBatch spriteBatch;
         Texture2D texture;
+        Tower currentTower;
 
         public int numberOfTowers = 5;
         Rectangle[] towersPhotoRectangle;
@@ -39,7 +40,7 @@ namespace TowerDefenseIA
             windowWidth = Game.Window.ClientBounds.Width;
             windowHeight = Game.Window.ClientBounds.Height;
 
-            int rectWidth = windowWidth / 5;
+            int rectWidth = windowWidth / 10;
             interfaceRectangle = new Rectangle(windowWidth - rectWidth, 0, rectWidth, windowHeight);
 
             InstantiateTowerPhotos();
@@ -92,26 +93,28 @@ namespace TowerDefenseIA
             }
         }
 
-        public void InstantiateTower(int i)
+        public Tower InstantiateTower(int i)
         {
             switch (i)
             {
                 case 0:
-                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), archerModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, archerModel);
                     break;
                 case 1:
-                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), jesterModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, jesterModel);
                     break;
                 case 2:
-                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), knightModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, knightModel);
                     break;
                 case 3:
-                    new Tower(Game, new Vector3(0.1f, 0.01f, 0.1f), new Vector3(90, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), mageModel);
+                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(-90, 0, 0), Vector3.Zero, mageModel);
                     break;
                 case 4:
-                    new Tower(Game, Vector3.One, new Vector3(0, 0, 0), new Vector3(Input.MousePosition.X, 0, Input.MousePosition.Y), chosenOneModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, chosenOneModel);
                     break;
             }
+
+            return currentTower;
         }
 
         public Rectangle TowerRectangle(int i)

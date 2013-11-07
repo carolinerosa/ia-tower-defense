@@ -2,22 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>map1.jpg</Source>
-      <Name>map1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\map1.xnb</Output>
-      <Time>2013-10-11T23:50:07.6869856-03:00</Time>
-    </Item>
-    <Item>
       <Source>Textures\path.jpg</Source>
       <Name>Textures\path</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb</Output>
-      <Time>2013-10-11T22:27:49.0675127-03:00</Time>
+      <Time>2013-11-07T13:59:37.2004847-02:00</Time>
     </Item>
     <Item>
       <Source>Textures\nonPath.png</Source>

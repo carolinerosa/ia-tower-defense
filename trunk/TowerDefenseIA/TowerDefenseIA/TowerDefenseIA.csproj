@@ -80,7 +80,7 @@
     <Compile Include="Classes\Grid.cs" />
     <Compile Include="Classes\Input.cs" />
     <Compile Include="Classes\Main.cs" />
-    <Compile Include="Classes\Plane.cs" />
+    <Compile Include="Classes\GamePlane.cs" />
     <Compile Include="Classes\RayUtil.cs" />
     <Compile Include="Classes\Tower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
