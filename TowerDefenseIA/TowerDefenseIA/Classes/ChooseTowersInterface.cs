@@ -18,12 +18,15 @@ namespace TowerDefenseIA
         int windowHeight;
         SpriteBatch spriteBatch;
         Texture2D texture;
-        Tower currentTower;
 
-        public int numberOfTowers = 5;
-        Rectangle[] towersPhotoRectangle;
-        Texture2D[] towerTextures;
-        Model archerModel, jesterModel, knightModel, mageModel, chosenOneModel;
+        int rectWidth;
+        int rectHeight;
+
+        public int numberOfElements = 8;
+        Rectangle[] interfaceElementsRectangle;
+        Texture2D[] elementTextures;
+        Model altarModel, apprenticeModel, sentinelModel, hereticModel, trapModel;
+        Tower currentTower;
 
         public ChooseTowersInterface(Game game, SpriteBatch spriteBatch, Texture2D texture) : base(game)
         {
@@ -40,39 +43,53 @@ namespace TowerDefenseIA
             windowWidth = Game.Window.ClientBounds.Width;
             windowHeight = Game.Window.ClientBounds.Height;
 
-            int rectWidth = windowWidth / 10;
-            interfaceRectangle = new Rectangle(windowWidth - rectWidth, 0, rectWidth, windowHeight);
+            rectWidth = windowWidth / 8;
+            rectHeight = windowHeight / 8;
+            interfaceRectangle = new Rectangle(0, 0, windowWidth, rectHeight);
 
             InstantiateTowerPhotos();
+        }
+
+        private void InstantiateTowerPhotos()
+        {
+            interfaceElementsRectangle = new Rectangle[numberOfElements];
+
+            for (int i = 0; i < numberOfElements; i++)
+            {
+                interfaceElementsRectangle[i] = new Rectangle(rectWidth * i, 0, rectWidth, rectHeight);
+            }
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            
-            towerTextures = new Texture2D[numberOfTowers];
-            towerTextures[0] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\ArcherTexture");
-            towerTextures[1] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\JesterTexture");
-            towerTextures[2] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\KnightTexture");
-            towerTextures[3] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\MageTexture");
-            towerTextures[4] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\ChosenOneTexture");
 
-            //archerModel = Game.Content.Load<Model>(@"Models\ArcherModel");
-            //jesterModel = Game.Content.Load<Model>(@"Models\JesterModel");
-            //knightModel = Game.Content.Load<Model>(@"Models\KnightModel");
-            mageModel = Game.Content.Load<Model>(@"Models\MageModel");
-            //chosenOneModel = Game.Content.Load<Model>(@"Models\ChosenOneModel");
+            elementTextures = new Texture2D[numberOfElements];
+            elementTextures[0] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\None");
+            elementTextures[1] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\Altar");
+            elementTextures[2] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\Apprentice");
+            elementTextures[3] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\Sentinel");
+            elementTextures[4] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\Heretic");
+            elementTextures[5] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\Trap");
+            elementTextures[6] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\None");
+            elementTextures[7] = Game.Content.Load<Texture2D>(@"Textures\TowerPhotos\None");
+
+            altarModel = Game.Content.Load<Model>(@"Models\Altar");
+            //apprenticeModel = Game.Content.Load<Model>(@"Models\JesterModel");
+            //sentinelModel = Game.Content.Load<Model>(@"Models\KnightModel");
+            hereticModel = Game.Content.Load<Model>(@"Models\MageModel");
+            trapModel = Game.Content.Load<Model>(@"Models\coco_bazoca");
         }
 
         public override void Draw(GameTime gameTime)
         {
             spriteBatch.Begin();
-            
+
             spriteBatch.Draw(texture, interfaceRectangle, Color.White);
 
-            for (int i = 0; i < numberOfTowers; i++)
+            for (int i = 0; i < numberOfElements; i++)
             {
-                spriteBatch.Draw(towerTextures[i], towersPhotoRectangle[i], Color.White);
+                spriteBatch.Draw(elementTextures[i], interfaceElementsRectangle[i], Color.White);
             }
 
             spriteBatch.End();
@@ -80,46 +97,35 @@ namespace TowerDefenseIA
             base.Draw(gameTime);
         }
 
-        private void InstantiateTowerPhotos()
-        {
-            towersPhotoRectangle = new Rectangle[numberOfTowers];
-
-            int rectWidth = windowWidth / 6;
-            int rectHeight = windowHeight / numberOfTowers;
-
-            for (int i = 0; i < numberOfTowers; i++)
-            {
-                towersPhotoRectangle[i] = new Rectangle(windowWidth - rectWidth, windowHeight - (rectHeight * (i + 1)), rectWidth, rectHeight);
-            }
-        }
-
         public Tower InstantiateTower(int i)
         {
             switch (i)
             {
-                case 0:
-                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, archerModel);
-                    break;
                 case 1:
-                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, jesterModel);
+                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(90, 90, 0), Vector3.Zero, altarModel);
                     break;
                 case 2:
-                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, knightModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, apprenticeModel);
                     break;
                 case 3:
-                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(-90, 0, 0), Vector3.Zero, mageModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, sentinelModel);
                     break;
                 case 4:
-                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, chosenOneModel);
+                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(-90, 0, 0), Vector3.Zero, hereticModel);
                     break;
+                case 5:
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, trapModel);
+                    break;
+                default:
+                    return null;
             }
 
             return currentTower;
         }
 
-        public Rectangle TowerRectangle(int i)
+        public Rectangle ElementRectangle(int i)
         {
-            return towersPhotoRectangle[i];
+            return interfaceElementsRectangle[i];
         }
     }
 }

@@ -15,7 +15,7 @@ namespace TowerDefenseIA
 
         static Matrix viewMatrix;
         static Matrix projectionMatrix;
-        float fieldOfView = 90;
+        float fieldOfView = 70;
         float near = 1, far = 50;
 
         public Camera(Game Game, Vector3 position, Vector3 rotation) : base(Game)

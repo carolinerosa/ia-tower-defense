@@ -50,7 +50,13 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Models\coco_bazoca.fbx">
+      <Name>coco_bazoca</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\MageModel.FBX">
       <Name>MageModel</Name>
@@ -59,28 +65,42 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Textures\TowerPhotos\ArcherTexture.jpg">
-      <Name>ArcherTexture</Name>
+    <Compile Include="Textures\TowerPhotos\None.jpg">
+      <Name>None</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Textures\TowerPhotos\ChosenOneTexture.jpg">
-      <Name>ChosenOneTexture</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Altar.FBX">
+      <Name>Altar</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\TowerPhotos\Altar.jpg">
+      <Name>Altar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Textures\TowerPhotos\JesterTexture.png">
-      <Name>JesterTexture</Name>
+    <Compile Include="Textures\TowerPhotos\Apprentice.jpg">
+      <Name>Apprentice</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Textures\TowerPhotos\KnightTexture.jpg">
-      <Name>KnightTexture</Name>
+    <Compile Include="Textures\TowerPhotos\Heretic.jpg">
+      <Name>Heretic</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Textures\TowerPhotos\MageTexture.jpg">
-      <Name>MageTexture</Name>
+    <Compile Include="Textures\TowerPhotos\Sentinel.jpg">
+      <Name>Sentinel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Textures\TowerPhotos\Trap.jpg">
+      <Name>Trap</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
