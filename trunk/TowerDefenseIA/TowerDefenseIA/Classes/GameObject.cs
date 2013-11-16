@@ -11,7 +11,7 @@ namespace TowerDefenseIA
         public Vector3 rotation;
         protected Vector3 position;
         public Texture2D texture;
-        protected Model model;
+        public Model model;
 
 
         public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position) : base(game)
@@ -29,7 +29,7 @@ namespace TowerDefenseIA
             this.rotation = rotation;
             this.position = position;
             this.texture = texture;
-
+            
             game.Components.Add(this);
         }
 

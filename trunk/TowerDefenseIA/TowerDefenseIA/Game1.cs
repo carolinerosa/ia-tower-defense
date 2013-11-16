@@ -21,8 +21,8 @@ namespace TowerDefenseIA
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = 1024;
-            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 600;
         }
 
         protected override void Initialize()
@@ -31,6 +31,8 @@ namespace TowerDefenseIA
             IsMouseVisible = true;
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            Input input = new Input(this);
 
             Main main = new Main(this, spriteBatch);
             Components.Add(main);

@@ -26,8 +26,7 @@ namespace TowerDefenseIA
         {
             if (isFixed == false)
             {
-                Vector3 mousePoint = GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1f), Camera.Projection, Camera.View, Matrix.Identity);
-                position = mousePoint;
+                position = Input.MousePositionInWorld;
             }
 
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);

@@ -18,6 +18,13 @@ namespace TowerDefenseIA
         private static KeyboardState _OldKeyboard { get; set; }
         private static MouseState _Mouse { get; set; }
 
+        private static Game game;
+
+        public Input(Game game)
+        {
+            Input.game = game;
+        }
+
         public static void Update()
         {
             _Keyboard = Keyboard.GetState();
@@ -26,29 +33,45 @@ namespace TowerDefenseIA
 
         public static bool GetKey(Keys k)
         {
-            return _Keyboard.IsKeyDown(k);
+            if(game.IsActive)
+                return _Keyboard.IsKeyDown(k);
+
+            return false;
         }
 
         public static bool GetKeyDown(Keys k)
         {
-            return _Keyboard.IsKeyDown(k) &&
-                   _OldKeyboard.IsKeyUp(k);
+            if (game.IsActive)
+            {
+                return _Keyboard.IsKeyDown(k) &&
+                       _OldKeyboard.IsKeyUp(k);
+            }
+
+            return false;
         }
 
         public static bool GetKeyUp(Keys k)
         {
-            return _Keyboard.IsKeyUp(k) &&
-                   _OldKeyboard.IsKeyDown(k);
+            if (game.IsActive)
+            {
+                return _Keyboard.IsKeyUp(k) &&
+                       _OldKeyboard.IsKeyDown(k);
+            }
+
+            return false;
         }
 
         public static bool LeftMouseButtonDown()
         {
-            if (_Mouse.LeftButton == ButtonState.Pressed)
+            if (game.IsActive)
             {
-                if (pressed == false)
+                if (_Mouse.LeftButton == ButtonState.Pressed)
                 {
-                    pressed = true;
-                    return true;
+                    if (pressed == false)
+                    {
+                        pressed = true;
+                        return true;
+                    }
                 }
             }
             
@@ -57,12 +80,15 @@ namespace TowerDefenseIA
         
         public static bool RightMouseButtonDown()
         {
-            if (_Mouse.RightButton == ButtonState.Pressed)
+            if (game.IsActive)
             {
-                if (pressed == false)
+                if (_Mouse.RightButton == ButtonState.Pressed)
                 {
-                    pressed = true;
-                    return true;
+                    if (pressed == false)
+                    {
+                        pressed = true;
+                        return true;
+                    }
                 }
             }
 
@@ -74,13 +100,21 @@ namespace TowerDefenseIA
             get { return new Vector2(_Mouse.X, _Mouse.Y); }
         }
 
+        public static Vector3 MousePositionInWorld
+        {
+            get { return game.GraphicsDevice.Viewport.Unproject(new Vector3(Input.MousePosition, 1f), Camera.Projection, Camera.View, Matrix.Identity); }
+        }
+
         public static void LateUpdate()
         {
             _OldKeyboard = _Keyboard;
-            
-            if (_Mouse.LeftButton == ButtonState.Released)
+
+            if (game.IsActive)
             {
-                pressed = false;
+                if (_Mouse.LeftButton == ButtonState.Released)
+                {
+                    pressed = false;
+                }
             }
         }
     }

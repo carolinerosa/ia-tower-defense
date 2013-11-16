@@ -29,51 +29,6 @@
       <Time>2013-10-15T10:26:25.9906413-03:00</Time>
     </Item>
     <Item>
-      <Source>Textures\TowerPhotos\ArcherTexture.jpg</Source>
-      <Name>Textures\TowerPhotos\ArcherTexture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ArcherTexture.xnb</Output>
-      <Time>2013-10-15T18:59:37.3868084-03:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\TowerPhotos\ChosenOneTexture.jpg</Source>
-      <Name>Textures\TowerPhotos\ChosenOneTexture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ChosenOneTexture.xnb</Output>
-      <Time>2013-10-15T19:04:35.6008653-03:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\TowerPhotos\JesterTexture.png</Source>
-      <Name>Textures\TowerPhotos\JesterTexture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\JesterTexture.xnb</Output>
-      <Time>2013-10-15T19:00:50.2809777-03:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\TowerPhotos\KnightTexture.jpg</Source>
-      <Name>Textures\TowerPhotos\KnightTexture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\KnightTexture.xnb</Output>
-      <Time>2013-10-15T19:03:11.7770708-03:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\TowerPhotos\MageTexture.jpg</Source>
-      <Name>Textures\TowerPhotos\MageTexture</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\MageTexture.xnb</Output>
-      <Time>2013-10-15T19:00:05.6404244-03:00</Time>
-    </Item>
-    <Item>
       <Source>Models\MageModel.FBX</Source>
       <Name>Models\MageModel</Name>
       <Importer>FbxImporter</Importer>
@@ -143,6 +98,100 @@
       <Options>None</Options>
       <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torrezinha_0.xnb</Output>
       <Time>2008-05-17T03:34:57.3971897-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\coco_bazoca.fbx</Source>
+      <Name>Models\coco_bazoca</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\coco_bazoca.xnb</Output>
+      <Time>2013-11-13T11:23:54-02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\coco_bazoca_0.xml</Key>
+        <Value>2013-11-13T11:43:21.7332832-02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\coco_bazoca.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\coco_bazoca_0.xml</Output>
+      <Time>2013-11-13T11:23:54-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\None.jpg</Source>
+      <Name>Textures\TowerPhotos\None</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\None.xnb</Output>
+      <Time>2013-11-07T16:37:38.2785733-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\Altar.jpg</Source>
+      <Name>Textures\TowerPhotos\Altar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Altar.xnb</Output>
+      <Time>2013-11-16T19:09:58.6272498-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\Apprentice.jpg</Source>
+      <Name>Textures\TowerPhotos\Apprentice</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Apprentice.xnb</Output>
+      <Time>2013-11-16T19:18:10.1383626-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\Heretic.jpg</Source>
+      <Name>Textures\TowerPhotos\Heretic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Heretic.xnb</Output>
+      <Time>2013-11-16T19:17:50.7172518-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\Sentinel.jpg</Source>
+      <Name>Textures\TowerPhotos\Sentinel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Sentinel.xnb</Output>
+      <Time>2013-11-16T19:18:16.2487121-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TowerPhotos\Trap.jpg</Source>
+      <Name>Textures\TowerPhotos\Trap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Trap.xnb</Output>
+      <Time>2013-11-16T19:18:59.8812077-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Altar.FBX</Source>
+      <Name>Models\Altar</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\Altar.xnb</Output>
+      <Time>2013-02-08T22:32:10-02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\Altar_0.xml</Key>
+        <Value>2013-11-16T19:22:36.3275878-02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Altar.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Models\Altar_0.xml</Output>
+      <Time>2013-02-08T22:32:10-02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
