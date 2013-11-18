@@ -42,13 +42,6 @@ namespace TowerDefenseIA
 
         protected override void Update(GameTime gameTime)
         {
-            Input.Update();
-
-            if (Input.GetKeyDown(Keys.Escape))
-                this.Exit();
-
-            Input.LateUpdate();
-
             base.Update(gameTime);
         }
 

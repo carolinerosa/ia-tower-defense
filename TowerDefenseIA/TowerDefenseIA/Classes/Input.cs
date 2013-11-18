@@ -33,32 +33,19 @@ namespace TowerDefenseIA
 
         public static bool GetKey(Keys k)
         {
-            if(game.IsActive)
-                return _Keyboard.IsKeyDown(k);
-
-            return false;
+            return _Keyboard.IsKeyDown(k);
         }
 
         public static bool GetKeyDown(Keys k)
         {
-            if (game.IsActive)
-            {
-                return _Keyboard.IsKeyDown(k) &&
-                       _OldKeyboard.IsKeyUp(k);
-            }
-
-            return false;
+            return _Keyboard.IsKeyDown(k) &&
+                   _OldKeyboard.IsKeyUp(k);
         }
 
         public static bool GetKeyUp(Keys k)
         {
-            if (game.IsActive)
-            {
-                return _Keyboard.IsKeyUp(k) &&
-                       _OldKeyboard.IsKeyDown(k);
-            }
-
-            return false;
+            return _Keyboard.IsKeyUp(k) &&
+                   _OldKeyboard.IsKeyDown(k);
         }
 
         public static bool LeftMouseButtonDown()
@@ -74,10 +61,10 @@ namespace TowerDefenseIA
                     }
                 }
             }
-            
+
             return false;
         }
-        
+
         public static bool RightMouseButtonDown()
         {
             if (game.IsActive)

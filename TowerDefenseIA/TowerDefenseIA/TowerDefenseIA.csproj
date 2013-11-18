@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Camera.cs" />
+    <Compile Include="Classes\StabilizedCamera.cs" />
     <Compile Include="Classes\CameraFPS.cs" />
     <Compile Include="Classes\ChooseTowersInterface.cs" />
     <Compile Include="Classes\Enemy.cs" />
