@@ -10,7 +10,6 @@ namespace TowerDefenseIA
 {
     public class Main : DrawableGameComponent
     {
-        //CameraFPS cam;
         Camera cam;
         Grid grid;
         ChooseTowersInterface chooseTowersInterface;
@@ -20,6 +19,8 @@ namespace TowerDefenseIA
         Texture2D chooseTowersTexture;
         SpriteBatch spriteBatch;
 
+        bool changeCamera = false;
+
         public Main(Game game, SpriteBatch spriteBatch) : base(game)
         {
             this.spriteBatch = spriteBatch;
@@ -28,8 +29,7 @@ namespace TowerDefenseIA
         public override void Initialize()
         {
             base.Initialize();
-            //cam = new CameraFPS(Game);
-            cam = new Camera(Game, Vector3.Up * 50, Vector3.Right * 90);
+            cam = new StabilizedCamera(Game, new Vector3(45, 50, 25.5f), Vector3.Right * 90, 1, 50, 87);
             grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
             chooseTowersInterface.DrawOrder = Game.Components.Count;
@@ -46,6 +46,13 @@ namespace TowerDefenseIA
 
         public override void Update(GameTime gameTime)
         {
+            Input.Update();
+
+            if (Input.GetKeyDown(Keys.Escape))
+            {
+                Game.Exit();
+            }
+
             if (Input.LeftMouseButtonDown())
             {
                 Console.WriteLine(Input.MousePositionInWorld);
@@ -66,8 +73,26 @@ namespace TowerDefenseIA
                     CheckInterfaceClick(Input.MousePosition);
                 }
             }
- 
+
+            if (Input.GetKeyDown(Keys.Delete))
+            {
+                changeCamera = !changeCamera;
+
+                if (changeCamera)
+                {
+                    Game.Components.Remove(cam);
+                    cam = new CameraFPS(Game);
+                }
+                else
+                {
+                    Game.Components.Remove(cam);
+                    cam = new StabilizedCamera(Game, new Vector3(45, 50, 25.5f), Vector3.Right * 90, 1, 50, 87);
+                }
+            }
+
             base.Update(gameTime);
+
+            Input.LateUpdate();
         }
 
         private void CheckInterfaceClick(Vector2 mousePosition)

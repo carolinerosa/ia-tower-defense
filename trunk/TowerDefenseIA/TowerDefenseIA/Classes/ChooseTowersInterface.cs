@@ -44,7 +44,7 @@ namespace TowerDefenseIA
             windowHeight = Game.Window.ClientBounds.Height;
 
             rectWidth = windowWidth / 8;
-            rectHeight = windowHeight / 8;
+            rectHeight = windowHeight / 7;
             interfaceRectangle = new Rectangle(0, 0, windowWidth, rectHeight);
 
             InstantiateTowerPhotos();
@@ -102,7 +102,7 @@ namespace TowerDefenseIA
             switch (i)
             {
                 case 1:
-                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(90, 90, 0), Vector3.Zero, altarModel);
+                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), Vector3.Zero, Vector3.Zero, altarModel);
                     break;
                 case 2:
                     currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, apprenticeModel);
