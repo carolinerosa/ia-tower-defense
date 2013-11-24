@@ -46,11 +46,11 @@ namespace TowerDefenseIA
 
                     if (y == 0)
                     {
-                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath, false);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), nonPath, false, x, y);
                     }
                     else
                     {
-                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path, true);
+                        planes[x, y] = new GamePlane(Game, planeScale, Vector3.Zero, new Vector3(positionX, 0, positionZ), path, true, x, y);
                     }
                 }
             }
@@ -73,6 +73,11 @@ namespace TowerDefenseIA
             }
 
             return null;
+        }
+
+        public GamePlane GetPlane(int x, int y)
+        {
+            return planes[x, y];
         }
     }
 }

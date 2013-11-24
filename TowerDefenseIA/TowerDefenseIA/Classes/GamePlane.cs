@@ -14,10 +14,14 @@ namespace TowerDefenseIA
         BasicEffect effect;
         bool _isPath;
         bool open = true;
+        private int row;
+        private int column;
 
-        public GamePlane(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture, bool isPath) : base(game, scale, rotation, position, texture)
+        public GamePlane(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture, bool isPath, int row, int column) : base(game, scale, rotation, position, texture)
         {
             _isPath = isPath;
+            this.row = row;
+            this.column = column;
         }
 
         public override void Initialize()
@@ -77,6 +81,16 @@ namespace TowerDefenseIA
         {
             get { return open; }
             set { open = value; }
+        }
+
+        public int Row
+        {
+            get { return row; }
+        }
+
+        public int Column
+        {
+            get { return column; }
         }
     }
 }

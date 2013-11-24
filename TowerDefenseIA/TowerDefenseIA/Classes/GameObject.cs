@@ -6,11 +6,11 @@ namespace TowerDefenseIA
 {
     public abstract class GameObject : DrawableGameComponent
     {
-        public Matrix world = Matrix.Identity;
-        public Vector3 scale;
-        public Vector3 rotation;
+        protected Matrix world = Matrix.Identity;
+        protected Vector3 scale;
+        protected Vector3 rotation;
         protected Vector3 position;
-        public Texture2D texture;
+        protected Texture2D texture;
         public Model model;
 
 

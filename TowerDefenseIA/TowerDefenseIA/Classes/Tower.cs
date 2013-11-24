@@ -9,8 +9,9 @@ namespace TowerDefenseIA
 {
     public class Tower : GameObject
     {
-        private bool isFixed = false;
+        protected bool isFixed = false;
         protected int price;
+        public int row;
 
         public Tower(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position, model)
         {
@@ -27,6 +28,7 @@ namespace TowerDefenseIA
             if (isFixed == false)
             {
                 position = Input.MousePositionInWorld;
+                
             }
 
             world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);
