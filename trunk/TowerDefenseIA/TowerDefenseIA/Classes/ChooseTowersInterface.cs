@@ -94,6 +94,10 @@ namespace TowerDefenseIA
 
             spriteBatch.End();
 
+            DepthStencilState zState = new DepthStencilState();
+            zState.DepthBufferEnable = true;
+            GraphicsDevice.DepthStencilState = zState;
+
             base.Draw(gameTime);
         }
 
@@ -111,7 +115,7 @@ namespace TowerDefenseIA
                     currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, sentinelModel);
                     break;
                 case 4:
-                    currentTower = new Tower(Game, new Vector3(0.1f, 0.1f, 0.1f), new Vector3(-90, 0, 0), Vector3.Zero, hereticModel);
+                    currentTower = new HereticTower(Game, Vector3.One * 0.1f, new Vector3(-90, 0, 0), Vector3.Zero, hereticModel);
                     break;
                 case 5:
                     currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, trapModel);

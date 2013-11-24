@@ -9,24 +9,27 @@ namespace TowerDefenseIA
 {
     public class Enemy : GameObject
     {
-        protected int speed;
+        protected int speed = 5 ;
+        private int row;
 
-        public Enemy(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game, scale, rotation, position, model)
+        public Enemy(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model, int row) : base(game, scale, rotation, position, model)
         {
-            
+            this.row = row;
+            SpawnManager.enemyQueues[row].Enqueue(this);
         }
 
         public override void Update(GameTime gameTime)
         {
+            position.X -= speed * (float)gameTime.ElapsedGameTime.Milliseconds/1000;
+            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Z, rotation.X, rotation.Y) * Matrix.CreateTranslation(position);
+            
             base.Update(gameTime);
-
-            position.X += speed;
         }
 
         public override void Draw(GameTime gameTime)
         {
             Matrix[] transforms = new Matrix[this.model.Bones.Count];
-            model.CopyAbsoluteBoneTransformsTo(transforms);
+            this.model.CopyAbsoluteBoneTransformsTo(transforms);
 
             foreach (ModelMesh mesh in model.Meshes)
             {

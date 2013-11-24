@@ -19,6 +19,8 @@ namespace TowerDefenseIA
         Texture2D chooseTowersTexture;
         SpriteBatch spriteBatch;
 
+        SpawnManager spawnManager;
+
         bool changeCamera = false;
 
         public Main(Game game, SpriteBatch spriteBatch) : base(game)
@@ -32,7 +34,8 @@ namespace TowerDefenseIA
             cam = new StabilizedCamera(Game, new Vector3(45, 50, 25.5f), Vector3.Right * 90, 1, 50, 87);
             grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
-            chooseTowersInterface.DrawOrder = Game.Components.Count;
+
+            spawnManager = new SpawnManager(Game, grid);
         }
 
         protected override void LoadContent()
@@ -47,6 +50,8 @@ namespace TowerDefenseIA
         public override void Update(GameTime gameTime)
         {
             Input.Update();
+
+            chooseTowersInterface.DrawOrder = Game.Components.Count;
 
             if (Input.GetKeyDown(Keys.Escape))
             {
@@ -64,6 +69,7 @@ namespace TowerDefenseIA
                     if (plane != null && plane.IsPath && plane.IsOpen)
                     {
                         currentTower.Fix(plane.GetPosition());
+                        currentTower.row = plane.Row; 
                         plane.IsOpen = false;
                         currentTower = null;
                     }
