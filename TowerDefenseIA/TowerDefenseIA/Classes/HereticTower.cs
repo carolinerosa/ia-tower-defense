@@ -28,7 +28,7 @@ namespace TowerDefenseIA
 
                     if (timer > attackCooldown)
                     {
-                        new Projectile(Game, Vector3.One, Vector3.Zero, position, projectileModel, this.row);
+                        new Projectile(Game, Vector3.One, new Vector3(-90, 0, 90), position, projectileModel, this.row);
                         timer = 0;
                     }
                 }

@@ -46,7 +46,7 @@ namespace TowerDefenseIA
 
         public override void Update(GameTime gameTime)
         {
-            world = Matrix.CreateScale(scale / 2) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position); 
+            world = Matrix.CreateScale(scale / 2) * Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(rotation.Y), MathHelper.ToRadians(rotation.X), MathHelper.ToRadians(rotation.Z)) * Matrix.CreateTranslation(position); 
 
             base.Update(gameTime);
         }

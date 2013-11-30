@@ -20,6 +20,7 @@ namespace TowerDefenseIA
 
         public override void Initialize()
         {
+            position = Input.MousePositionInWorld;
             base.Initialize();
         }
 
@@ -31,7 +32,7 @@ namespace TowerDefenseIA
                 
             }
 
-            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z) * Matrix.CreateTranslation(position);
+            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(rotation.Y), MathHelper.ToRadians(rotation.X), MathHelper.ToRadians(rotation.Z)) * Matrix.CreateTranslation(position);
             
             base.Update(gameTime);
         }
@@ -44,7 +45,7 @@ namespace TowerDefenseIA
 
         public override void Draw(GameTime gameTime)
         {
-            Matrix[] transforms = new Matrix[this.model.Bones.Count];
+            transforms = new Matrix[this.model.Bones.Count];
             this.model.CopyAbsoluteBoneTransformsTo(transforms);
 
             foreach (ModelMesh mesh in model.Meshes)

@@ -21,14 +21,14 @@ namespace TowerDefenseIA
         public override void Update(GameTime gameTime)
         {
             position.X -= speed * (float)gameTime.ElapsedGameTime.Milliseconds/1000;
-            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Z, rotation.X, rotation.Y) * Matrix.CreateTranslation(position);
+            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(rotation.Y), MathHelper.ToRadians(rotation.X), MathHelper.ToRadians(rotation.Z)) * Matrix.CreateTranslation(position);
             
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
-            Matrix[] transforms = new Matrix[this.model.Bones.Count];
+            transforms = new Matrix[this.model.Bones.Count];
             this.model.CopyAbsoluteBoneTransformsTo(transforms);
 
             foreach (ModelMesh mesh in model.Meshes)
@@ -45,6 +45,12 @@ namespace TowerDefenseIA
             }
 
             base.Draw(gameTime);
+        }
+
+        public void Destroy()
+        {
+            SpawnManager.enemyQueues[row].Dequeue();
+            Game.Components.Remove(this);   
         }
     }
 }
