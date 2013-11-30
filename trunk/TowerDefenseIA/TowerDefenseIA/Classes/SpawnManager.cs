@@ -30,16 +30,16 @@ namespace TowerDefenseIA
         {
             base.Initialize();
             
-            Vector3 enemyPosition = new Vector3(grid.GetPlane(0, 9).GetPosition().X, 5, grid.GetPlane(0, 9).GetPosition().Z); 
+            Vector3 enemyPosition = new Vector3(grid.GetPlane(0, 9).GetPosition().X, 1, grid.GetPlane(0, 9).GetPosition().Z); 
 
-            new Enemy(Game, Vector3.One * 0.1f, Vector3.Zero, enemyPosition, model, 0);
+            new Enemy(Game, Vector3.One, new Vector3(-90, 0, 90), enemyPosition, model, 0);
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
 
-            model = Game.Content.Load<Model>(@"Models\Altar");
+            model = Game.Content.Load<Model>(@"Models\coco_bazoca");
         }
     }
 }

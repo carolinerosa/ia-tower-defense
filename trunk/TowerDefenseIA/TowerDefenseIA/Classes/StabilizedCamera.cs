@@ -25,8 +25,8 @@ namespace TowerDefenseIA
         {
             base.Initialize();
 
-            rotationMatrix = Matrix.CreateFromYawPitchRoll(rotation.Y, rotation.X, rotation.Z);
-            upVector = Vector3.Transform(Vector3.Up, -rotationMatrix);
+            rotationMatrix = Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(rotation.Y), MathHelper.ToRadians(rotation.X), MathHelper.ToRadians(rotation.Z));
+            upVector = Vector3.Transform(Vector3.Up, rotationMatrix);
         }
 
         public override void Update(GameTime gameTime)

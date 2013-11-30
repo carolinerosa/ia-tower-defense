@@ -9,7 +9,7 @@ namespace TowerDefenseIA
 {
     public class Projectile : GameObject
     {
-        private GameObject target;
+        private Enemy target = null;
         private int row;
         private int speed = 5;
 
@@ -20,22 +20,36 @@ namespace TowerDefenseIA
 
         public override void Update(GameTime gameTime)
         {
-            CheckTarget();
+            target = CheckTarget();
 
-            if (target != null)
+            if(target != null)
             {
-                CheckCollision();
+                if (CheckCollision(this, target))
+                {
+                    target.Destroy();
+                    target = null;
+                }
             }
-
+            
             position.X += speed * (float)gameTime.ElapsedGameTime.Milliseconds / 1000;
-            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(rotation.Z, rotation.X, rotation.Y) * Matrix.CreateTranslation(position);
+            world = Matrix.CreateScale(scale) * Matrix.CreateFromYawPitchRoll(MathHelper.ToRadians(rotation.Y), MathHelper.ToRadians(rotation.X), MathHelper.ToRadians(rotation.Z)) * Matrix.CreateTranslation(position);
 
             base.Update(gameTime);
         }
 
+        private Enemy CheckTarget()
+        {
+            if (SpawnManager.enemyQueues[row].Count > 0)
+            {
+                return SpawnManager.enemyQueues[row].Peek();
+            }
+
+            return null;
+        }
+
         public override void Draw(GameTime gameTime)
         {
-            Matrix[] transforms = new Matrix[this.model.Bones.Count];
+            transforms = new Matrix[this.model.Bones.Count];
             this.model.CopyAbsoluteBoneTransformsTo(transforms);
 
             foreach (ModelMesh mesh in model.Meshes)
@@ -52,34 +66,6 @@ namespace TowerDefenseIA
             }
 
             base.Draw(gameTime);
-        }
-
-        private void CheckTarget()
-        {
-            target = SpawnManager.enemyQueues[row].Peek();
-        }
-
-        private void CheckCollision()
-        {
-            for (int i = 0; i < this.model.Meshes.Count; i++)
-            {
-                // Check whether the bounding boxes of the two cubes intersect.
-                BoundingSphere c1BoundingSphere = this.model.Meshes[i].BoundingSphere;
-                c1BoundingSphere.Center += this.GetPosition();
-
-                for (int j = 0; j < target.model.Meshes.Count; j++)
-                {
-                    BoundingSphere c2BoundingSphere = target.model.Meshes[j].BoundingSphere;
-                    c2BoundingSphere.Center += target.GetPosition();
-
-                    if (c1BoundingSphere.Intersects(c2BoundingSphere))
-                    {
-                        //Colidiu
-                        Console.WriteLine("Colidi");
-                        return;
-                    }
-                }
-            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TowerDefenseIA
         public override void Initialize()
         {
             base.Initialize();
-            cam = new StabilizedCamera(Game, new Vector3(45, 50, 25.5f), Vector3.Right * 90, 1, 50, 87);
+            cam = new StabilizedCamera(Game, new Vector3(45, 50, 25.5f), -Vector3.Right * 90, 1, 50, 87);
             grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
 
