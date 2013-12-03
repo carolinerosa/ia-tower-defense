@@ -1,0 +1,48 @@
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.exe
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.exe
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\map1.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.exe
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.exe
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\chooseTowers.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\MageModel.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torre_0.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\telhado_0.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torrezinha_0.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\path.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\nonPath.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\chooseTowers.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ArcherTexture.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\ChosenOneTexture.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\JesterTexture.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\KnightTexture.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\MageTexture.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\MageModel.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torre_0.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\telhado_0.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\torrezinha_0.xnb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.exe
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.csprojResolveAssemblyReference.cache
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.exe
+C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\obj\x86\Debug\TowerDefenseIA.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\coco_bazoca.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\None.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Altar.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Apprentice.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Heretic.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Sentinel.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Textures\TowerPhotos\Trap.xnb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIA\bin\x86\Debug\Content\Models\Altar.xnb
