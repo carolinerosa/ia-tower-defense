@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using TowerDefenseIA.Classes;
+using System.Collections.Generic;
 
 namespace TowerDefenseIA
 {
@@ -13,6 +15,10 @@ namespace TowerDefenseIA
         protected Texture2D texture;
 
         public Model model;
+        public AnimatedModel animatedModel;
+        public Dictionary<string, AnimatedModel> animatedModels;
+        
+
         protected Matrix[] transforms;
 
         public BoundingBox boundingBox;
@@ -23,7 +29,7 @@ namespace TowerDefenseIA
             this.scale = scale;
             this.rotation = rotation;
             this.position = position;
-
+            
             game.Components.Add(this);
         }
 
@@ -45,6 +51,28 @@ namespace TowerDefenseIA
             this.rotation = rotation;
             this.position = position;
             this.model = model;
+
+            game.Components.Add(this);
+        }
+
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, AnimatedModel animatedModel)
+            : base(game)
+        {
+            this.scale = scale;
+            this.rotation = rotation;
+            this.position = position;
+            this.animatedModel = animatedModel;
+
+            game.Components.Add(this);
+        }
+
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Dictionary<string, AnimatedModel> models)
+            : base(game)
+        {
+            this.scale = scale;
+            this.rotation = rotation;
+            this.position = position;
+            this.animatedModels = models;
 
             game.Components.Add(this);
         }
