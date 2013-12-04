@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>Altar.max_Scene_Node01</Name>
     <Identity>
-      <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
+      <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -49,14 +49,14 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Marmol</Name>
       <Identity>
-        <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
+        <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
     </Resource>
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>white_Fabric</Name>
       <Identity>
-        <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
+        <SourceFilename>C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\TowerDefenseIA\TowerDefenseIAContent\Models\Altar.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
     </Resource>

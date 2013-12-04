@@ -72,21 +72,25 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Camera.cs" />
-    <Compile Include="Classes\HereticTower.cs" />
-    <Compile Include="Classes\SpawnManager.cs" />
-    <Compile Include="Classes\StabilizedCamera.cs" />
-    <Compile Include="Classes\CameraFPS.cs" />
-    <Compile Include="Classes\ChooseTowersInterface.cs" />
+    <Compile Include="Classes\AnimatedModel.cs" />
+    <Compile Include="Classes\Cameras\Camera.cs" />
+    <Compile Include="Classes\Interface\Sun.cs" />
+    <Compile Include="Classes\Towers\AnimatedTower.cs" />
+    <Compile Include="Classes\Towers\HereticTower.cs" />
+    <Compile Include="Classes\Management\SpawnManager.cs" />
+    <Compile Include="Classes\Cameras\StabilizedCamera.cs" />
+    <Compile Include="Classes\Cameras\CameraFPS.cs" />
+    <Compile Include="Classes\Interface\ChooseTowersInterface.cs" />
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\GameObject.cs" />
     <Compile Include="Classes\Grid.cs" />
-    <Compile Include="Classes\Input.cs" />
+    <Compile Include="Classes\Management\Input.cs" />
     <Compile Include="Classes\Main.cs" />
     <Compile Include="Classes\GamePlane.cs" />
     <Compile Include="Classes\Projectile.cs" />
     <Compile Include="Classes\RayUtil.cs" />
-    <Compile Include="Classes\Tower.cs" />
+    <Compile Include="Classes\Management\SunSystem.cs" />
+    <Compile Include="Classes\Towers\Tower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
@@ -98,6 +102,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SkinnedModel\SkinnedModelWindows.csproj">
+      <Project>{0D41E29B-829F-4255-BCA5-64DC2677DA6D}</Project>
+      <Name>SkinnedModelWindows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TowerDefenseIAContent\TowerDefenseIAContent.contentproj">
       <Name>TowerDefenseIAContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>

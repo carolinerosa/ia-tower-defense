@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using TowerDefenseIA.Classes;
+using System.Collections.Generic;
 
 namespace TowerDefenseIA
 {
@@ -13,12 +15,14 @@ namespace TowerDefenseIA
         protected Texture2D texture;
 
         public Model model;
+        public AnimatedModel animatedModel;
+        public Dictionary<string, AnimatedModel> animatedModels;
+
         protected Matrix[] transforms;
 
         public BoundingBox boundingBox;
 
-        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position)
-            : base(game)
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position) : base(game)
         {
             this.scale = scale;
             this.rotation = rotation;
@@ -27,8 +31,7 @@ namespace TowerDefenseIA
             game.Components.Add(this);
         }
 
-        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture)
-            : base(game)
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Texture2D texture) : base(game)
         {
             this.scale = scale;
             this.rotation = rotation;
@@ -38,8 +41,7 @@ namespace TowerDefenseIA
             game.Components.Add(this);
         }
 
-        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model)
-            : base(game)
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Model model) : base(game)
         {
             this.scale = scale;
             this.rotation = rotation;
@@ -49,7 +51,32 @@ namespace TowerDefenseIA
             game.Components.Add(this);
         }
 
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, AnimatedModel animatedModel) : base(game)
+        {
+            this.scale = scale;
+            this.rotation = rotation;
+            this.position = position;
+            this.animatedModel = animatedModel;
+
+            game.Components.Add(this);
+        }
+
+        public GameObject(Game game, Vector3 scale, Vector3 rotation, Vector3 position, Dictionary<string, AnimatedModel> models) : base(game)
+        {
+            this.scale = scale;
+            this.rotation = rotation;
+            this.position = position;
+            this.animatedModels = models;
+
+            game.Components.Add(this);
+        }
+
         public Vector3 GetPosition() { return position; }
+
+        public virtual void Destroy()
+        {
+            Game.Components.Remove(this);
+        }
 
         public bool CheckCollision(GameObject go1, GameObject go2)
         {
@@ -142,7 +169,7 @@ namespace TowerDefenseIA
             effect.Projection = Camera.Projection;
             effect.VertexColorEnabled = true;
             effect.TextureEnabled = false;
-            
+
             for (int i = 0; i < corners.Length; i++)
             {
                 verts[i] = new VertexPositionColor(corners[i], Color.AliceBlue);

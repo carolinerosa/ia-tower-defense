@@ -47,7 +47,7 @@ namespace TowerDefenseIA
             base.Draw(gameTime);
         }
 
-        public void Destroy()
+        public override void Destroy()
         {
             SpawnManager.enemyQueues[row].Dequeue();
             Game.Components.Remove(this);   
