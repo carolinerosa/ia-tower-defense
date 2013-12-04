@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using SkinnedModel;
 
 namespace TowerDefenseIA
 {
@@ -25,7 +26,7 @@ namespace TowerDefenseIA
         public int numberOfElements = 8;
         Rectangle[] interfaceElementsRectangle;
         Texture2D[] elementTextures;
-        Model altarModel, apprenticeModel, sentinelModel, hereticModel, trapModel;
+        Model altarModel, apprenticeModel, sentinelModel, hereticModel, modelBazooca;
         Tower currentTower;
 
         public ChooseTowersInterface(Game game, SpriteBatch spriteBatch, Texture2D texture) : base(game)
@@ -78,7 +79,7 @@ namespace TowerDefenseIA
             //apprenticeModel = Game.Content.Load<Model>(@"Models\JesterModel");
             //sentinelModel = Game.Content.Load<Model>(@"Models\KnightModel");
             hereticModel = Game.Content.Load<Model>(@"Models\MageModel");
-            trapModel = Game.Content.Load<Model>(@"Models\coco_bazoca");
+            modelBazooca = Game.Content.Load<Model>(@"Models\coco_bazoca");
         }
 
         public override void Draw(GameTime gameTime)
@@ -118,7 +119,7 @@ namespace TowerDefenseIA
                     currentTower = new HereticTower(Game, Vector3.One * 0.1f, new Vector3(-90, 0, 0), Vector3.Zero, hereticModel);
                     break;
                 case 5:
-                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, trapModel);
+                    currentTower = new Tower(Game, Vector3.One, Vector3.Zero, Vector3.Zero, modelBazooca);
                     break;
                 default:
                     return null;

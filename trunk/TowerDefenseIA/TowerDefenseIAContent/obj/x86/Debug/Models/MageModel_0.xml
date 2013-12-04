@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
+      <SourceFilename>C:\Users\Lazer\Desktop\NAVE - Trabalhos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -431,7 +431,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>3</Name>
       <Identity>
-        <SourceFilename>C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
+        <SourceFilename>C:\Users\Lazer\Desktop\NAVE - Trabalhos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -453,7 +453,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>1</Name>
       <Identity>
-        <SourceFilename>C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
+        <SourceFilename>C:\Users\Lazer\Desktop\NAVE - Trabalhos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -475,7 +475,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>2</Name>
       <Identity>
-        <SourceFilename>C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
+        <SourceFilename>C:\Users\Lazer\Desktop\NAVE - Trabalhos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\Models\MageModel.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

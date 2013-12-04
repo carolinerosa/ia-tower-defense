@@ -35,7 +35,7 @@ namespace TowerDefenseIA
             grid = new Grid(Game, Vector3.Zero, 5, 10, pathTexture, nonPathTexture);
             chooseTowersInterface = new ChooseTowersInterface(Game, spriteBatch, chooseTowersTexture);
 
-            spawnManager = new SpawnManager(Game, grid);
+            //spawnManager = new SpawnManager(Game, grid);
         }
 
         protected override void LoadContent()
