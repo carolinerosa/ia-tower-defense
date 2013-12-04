@@ -1,3 +1,4 @@
 C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\TowerDefenseIA\TowerDefenseIA\TowerDefenseIAContent\obj\x86\Debug\TowerDefenseIAContent.contentprojResolveAssemblyReference.cache
 C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\obj\x86\Debug\TowerDefenseIAContent.contentprojResolveAssemblyReference.cache
 C:\Users\Lazer\Desktop\ia-tower-defense\TowerDefenseIA\TowerDefenseIAContent\obj\x86\Debug\TowerDefenseIAContent.contentprojResolveAssemblyReference.cache
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\TowerDefenseIA\TowerDefenseIAContent\obj\x86\Debug\TowerDefenseIAContent.contentprojResolveAssemblyReference.cache

@@ -1,0 +1,12 @@
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModelWindows.csprojResolveAssemblyReference.cache
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.dll
+C:\Users\Lazer\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\obj\x86\Debug\SkinnedModelWindows.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\obj\x86\Debug\SkinnedModel.dll
+C:\Users\Gustavo Boiúna\Gustavo\Nave\Projetos\ia-tower-defense\Projeto\SkinnedModel\obj\x86\Debug\SkinnedModel.pdb
