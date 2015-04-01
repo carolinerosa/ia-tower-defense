@@ -1,0 +1,1 @@
+Um jogo acadêmico que serve de estudo para a ferramenta de desenvolvimento XNA. O jogo é um Tower defense com temática tribal e utilização de inteligência artificial.
